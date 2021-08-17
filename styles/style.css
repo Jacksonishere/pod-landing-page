@@ -44,6 +44,17 @@ body {
   }
 }
 
+@media (min-width: 87.5em) {
+  .background::before {
+    background-image: url("../assets/desktop/image-host.jpg");
+    width: 962px;
+    height: 640px;
+    background-size: 100% 100%;
+    top: 130px;
+    right: 0;
+  }
+}
+
 .background::after {
   display: none;
   position: absolute;
@@ -63,6 +74,13 @@ body {
   }
 }
 
+@media (min-width: 64em) {
+  .background::after {
+    top: 718px;
+    right: 0;
+  }
+}
+
 .container {
   outline: solid 1px magenta;
   margin: 0 auto;
@@ -79,6 +97,12 @@ body {
     margin: 0;
     padding-left: 4.75rem;
     text-align: left;
+  }
+}
+
+@media (min-width: 64em) {
+  .container {
+    max-width: 725px;
   }
 }
 
