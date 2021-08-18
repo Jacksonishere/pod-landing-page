@@ -8,7 +8,7 @@
 }
 
 body {
-    line-height: 1.3;
+	line-height: 1.3;
 	position: relative;
 	font-size: 1rem;
 	font-weight: 300;
@@ -17,8 +17,8 @@ body {
 }
 
 .background {
-    &::before {
-        position: fixed;
+	&::before {
+		position: fixed;
 		content: "";
 		background-image: url("../assets/mobile/image-host.jpg");
 		height: 100%;
@@ -28,226 +28,222 @@ body {
 		background-size: 100%;
 		background-repeat: no-repeat;
 		background-position: center center;
-        
-        @include breakpoint-up(medium){
-            top: 0;
-            right: 0;
-            background-image: url("../assets/tablet/image-host.jpg");
-            width: 491px;
-            height: 767px;
-            position: absolute;
-            z-index: 1;
-            opacity: 1;
-        }
 
-        @include breakpoint-up(xlarge){
-            background-image: url("../assets/desktop/image-host.jpg");
-            width: 888px;
-            height: 640px;
-            background-size: 100% 100%;
-            top: 130px;
-            right: 0;
-        }
+		@include breakpoint-up(medium) {
+			top: 0;
+			right: 0;
+			background-image: url("../assets/tablet/image-host.jpg");
+			width: 491px;
+			height: 767px;
+			position: absolute;
+			z-index: 1;
+			opacity: 1;
+		}
+
+		@include breakpoint-up(xlarge) {
+			background-image: url("../assets/desktop/image-host.jpg");
+			width: 888px;
+			height: 640px;
+			background-size: 100% 100%;
+			top: 130px;
+			right: 0;
+		}
 	}
-    &::after{
-        display: none;
-        position: absolute;
+	&::after {
+		display: none;
+		position: absolute;
 		content: "";
 		background-image: url("../assets/desktop/bg-pattern-dots.svg");
 		height: 104px;
 		width: 232px;
-        top: 920px;
+		top: 920px;
 		z-index: 1;
 		opacity: 1;
-        margin-left: 76px;
+		margin-left: 76px;
 
-        @include breakpoint-up(medium){
-            margin-left: 46px;
-            display: block;
-        }
-        @include breakpoint-up(large){
-            top: 718px;
-            right: 0;
-            z-index: 4;
-        }
-        @include breakpoint-up(xlarge){
-            top: 718px;
-            z-index: 1;
-        }
-    }
+		@include breakpoint-up(medium) {
+			margin-left: 46px;
+			display: block;
+		}
+		@include breakpoint-up(large) {
+			top: 718px;
+			right: 0;
+			z-index: 4;
+		}
+		@include breakpoint-up(xlarge) {
+			top: 718px;
+			z-index: 1;
+		}
+	}
 }
 
-.container{
-    outline: solid 1px magenta;
-    margin: 0 auto;
-    padding: 3.75rem 1.75rem 5.875rem;
-    text-align: center;
-    line-height: 1.6;
-    max-width: 425px;   
-    
-    @include breakpoint-up(medium){
-        height: 900px;
-        max-width: 90%;
-        margin: 0;
-        padding-left: 2.625rem;
-        text-align: left;
-    }
+.container {
+	margin: 0 auto;
+	padding: 3.75rem 1.75rem 5.875rem;
+	text-align: center;
+	line-height: 1.6;
+	max-width: 425px;
 
-    @include breakpoint-up(large){
-        padding-left: 10.3125rem;
-    }
+	@include breakpoint-up(medium) {
+		height: 900px;
+		max-width: 90%;
+		margin: 0;
+		padding-left: 2.625rem;
+		text-align: left;
+	}
+
+	@include breakpoint-up(large) {
+		padding-left: 10.3125rem;
+	}
 }
 
-.logo{
-    outline: 1px solid red;
-    @include flex-properties(row, center, center);
-    @include breakpoint-up(medium){
-        @include flex-properties(row, center, flex-start);
-    }
-    @include breakpoint-up(large){
-        position: relative;
-        top: 50px;
-    }
+.logo {
+	@include flex-properties(row, center, center);
+	@include breakpoint-up(medium) {
+		@include flex-properties(row, center, flex-start);
+	}
+	@include breakpoint-up(large) {
+		position: relative;
+		top: 50px;
+	}
 }
 
 .card-content {
-    position: relative;
-    background-color: $dark-bg;
-    margin-top: 3.65rem;
+	position: relative;
+	background-color: $dark-bg;
+	margin-top: 3.65rem;
 
-    @include flex-properties(column,center,center);
+	@include flex-properties(column, center, center);
 	> h2 {
-        order: 2;
-        font-weight: lighter;
+		order: 2;
+		font-weight: lighter;
 		color: white;
 		text-transform: uppercase;
 	}
-    
+
 	.title-accent {
-        order: 1;
-        color: $green-theme;
+		order: 1;
+		color: $green-theme;
 	}
-    
+
 	> p {
-        order: 3;
-        color: $paragraph-text;
-        padding: .4rem .2rem 0;
-        line-height: 1.8;
+		order: 3;
+		color: $paragraph-text;
+		padding: 0.4rem 0.2rem 0;
+		line-height: 1.8;
 	}
 
-    @include breakpoint-up(medium){
-        margin-top: 8.8rem;
-        > h2{
-            max-width: 635px;
-            letter-spacing: .1rem;
-            font-size: 2.7rem;
-            margin-top: -1rem;
-        }
+	@include breakpoint-up(medium) {
+		margin-top: 8.8rem;
+		> h2 {
+			max-width: 635px;
+			letter-spacing: 0.1rem;
+			font-size: 2.7rem;
+			margin-top: -1rem;
+		}
 
-        > p, form{
-            max-width: 435px;
-        }
+		> p,
+		form {
+			max-width: 435px;
+		}
 
-        @include flex-properties(column,flex-start,center);
-        z-index: 2;
-        padding-top: 6.25rem;
-    }
-    @include breakpoint-up(large){
-        max-width: 723px;
-        padding-top: 6.2rem;
+		@include flex-properties(column, flex-start, center);
+		z-index: 2;
+		padding-top: 6.25rem;
+	}
+	@include breakpoint-up(large) {
+		max-width: 723px;
+		padding-top: 6.2rem;
 
-        > h2{
-            font-size: 3rem;
-        }
-
-    }
+		> h2 {
+			font-size: 3rem;
+		}
+	}
 }
 
-.sponsors{
-    order: 4;
+.sponsors {
+	order: 4;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    justify-items: center;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: center;
+	justify-items: center;
 
-    margin: 2rem auto;
-    width: 100%;
-    img{
-        width: 3.75rem;
-        opacity: .6;
-    }
+	margin: 2rem auto;
+	width: 100%;
+	img {
+		width: 3.75rem;
+		opacity: 0.6;
+	}
 
-    @include breakpoint-up(medium){
-        order: 5;
-        margin: 2rem 0;
-        width: 600px;
-        justify-items: flex-start;
-        grid-template-columns: repeat(4, auto);
+	@include breakpoint-up(medium) {
+		order: 5;
+		margin: 2rem 0;
+		width: 600px;
+		justify-items: flex-start;
+		grid-template-columns: repeat(4, auto);
 
-        img{
-            width: auto;
-        }
-    }
+		img {
+			width: auto;
+		}
+	}
 }
 
-form{
-    position: relative;
-    order: 5;
-    width: 90%;
-    margin-top: 1rem;
-    @include breakpoint-up(medium){
-        margin: 3rem 0;
-        order: 4;
-    }
-    input{
-        width: 100%;
-        font-family: inherit;
-        display: block;
-        height: 2.875rem;
-        border-radius: 1000rem;
-        border: none;
+form {
+	position: relative;
+	order: 5;
+	width: 90%;
+	margin-top: 1rem;
+	@include breakpoint-up(medium) {
+		margin: 3rem 0;
+		order: 4;
+	}
+	input {
+		width: 100%;
+		font-family: inherit;
+		display: block;
+		height: 2.875rem;
+		border-radius: 1000rem;
+		border: none;
 
-        &[type=text]{
-            padding: 0 2rem;
-            font-weight: 700;
-            font-size: .9rem;
-            background-color: $button-bg;
-            color: $button-bg;
+		&[type="text"] {
+			padding: 0 2rem;
+			font-weight: 700;
+			font-size: 0.9rem;
+			background-color: $button-bg;
+			color: $button-bg;
 
-            // &:focus{
-            //     color: white;
-            // }
-        }
+			// &:focus{
+			//     color: white;
+			// }
+		}
 
-        &[type=submit]{
-            margin-top: 1rem;
-            font-weight: 700;
-            font-size: .9rem;
-            background-color: $green-theme;
-            color: black;
-            
-            @include breakpoint-up(medium){
-                position: absolute;
-                top: calc(-1rem + 7.5%);
-                right: 1%;
-                width: 152px;
-                height: 85%;
-                
-            }
-        }
-    }
-    #warning{
-        position: absolute;
-        left: 2rem;
-        color: transparent;
-        font-family: inherit;
-        font-weight: 700;
-        font-size: .68rem;
+		&[type="submit"] {
+			margin-top: 1rem;
+			font-weight: 700;
+			font-size: 0.9rem;
+			background-color: $green-theme;
+			color: black;
 
-        @include breakpoint-up(medium){
-            font-size: 1rem;
-        }
+			@include breakpoint-up(medium) {
+				position: absolute;
+				top: calc(-1rem + 7.5%);
+				right: 1%;
+				width: 152px;
+				height: 85%;
+			}
+		}
+	}
+	#warning {
+		position: absolute;
+		left: 2rem;
+		color: transparent;
+		font-family: inherit;
+		font-weight: 700;
+		font-size: 0.68rem;
 
-    }
+		@include breakpoint-up(medium) {
+			font-size: 1rem;
+		}
+	}
 }

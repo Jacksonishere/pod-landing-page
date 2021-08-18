@@ -91,7 +91,6 @@ body {
 }
 
 .container {
-  outline: solid 1px magenta;
   margin: 0 auto;
   padding: 3.75rem 1.75rem 5.875rem;
   text-align: center;
@@ -116,7 +115,6 @@ body {
 }
 
 .logo {
-  outline: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -197,7 +195,7 @@ body {
       -ms-flex-order: 3;
           order: 3;
   color: #c2cbe5;
-  padding: .4rem .2rem 0;
+  padding: 0.4rem 0.2rem 0;
   line-height: 1.8;
 }
 
@@ -222,11 +220,12 @@ body {
   }
   .card-content > h2 {
     max-width: 635px;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     font-size: 2.7rem;
     margin-top: -1rem;
   }
-  .card-content > p, .card-content form {
+  .card-content > p,
+  .card-content form {
     max-width: 435px;
   }
 }
@@ -259,7 +258,7 @@ body {
 
 .sponsors img {
   width: 3.75rem;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 @media (min-width: 48em) {
@@ -305,24 +304,24 @@ form input {
   border: none;
 }
 
-form input[type=text] {
+form input[type="text"] {
   padding: 0 2rem;
   font-weight: 700;
-  font-size: .9rem;
+  font-size: 0.9rem;
   background-color: #2b334a;
   color: #2b334a;
 }
 
-form input[type=submit] {
+form input[type="submit"] {
   margin-top: 1rem;
   font-weight: 700;
-  font-size: .9rem;
+  font-size: 0.9rem;
   background-color: #56e6af;
   color: black;
 }
 
 @media (min-width: 48em) {
-  form input[type=submit] {
+  form input[type="submit"] {
     position: absolute;
     top: calc(-1rem + 7.5%);
     right: 1%;
@@ -337,7 +336,7 @@ form #warning {
   color: transparent;
   font-family: inherit;
   font-weight: 700;
-  font-size: .68rem;
+  font-size: 0.68rem;
 }
 
 @media (min-width: 48em) {
