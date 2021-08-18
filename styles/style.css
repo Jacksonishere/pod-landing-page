@@ -70,6 +70,7 @@ body {
 
 @media (min-width: 48em) {
   .background::after {
+    margin-left: 46px;
     display: block;
   }
 }
@@ -85,7 +86,6 @@ body {
 @media (min-width: 87.5em) {
   .background::after {
     top: 718px;
-    right: 0;
     z-index: 1;
   }
 }
@@ -234,7 +234,10 @@ body {
 @media (min-width: 64em) {
   .card-content {
     max-width: 723px;
-    padding-top: 8rem;
+    padding-top: 6.2rem;
+  }
+  .card-content > h2 {
+    font-size: 3rem;
   }
 }
 
@@ -286,7 +289,7 @@ form {
 
 @media (min-width: 48em) {
   form {
-    margin: 3rem 0 2.2rem;
+    margin: 3rem 0;
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
@@ -321,10 +324,25 @@ form input[type=submit] {
 @media (min-width: 48em) {
   form input[type=submit] {
     position: absolute;
-    top: calc(-1rem + 9%);
+    top: calc(-1rem + 7.5%);
     right: 1%;
     width: 152px;
-    height: 82%;
+    height: 85%;
+  }
+}
+
+form #warning {
+  position: absolute;
+  left: 2rem;
+  color: transparent;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: .68rem;
+}
+
+@media (min-width: 48em) {
+  form #warning {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
