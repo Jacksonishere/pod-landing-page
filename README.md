@@ -26,7 +26,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://www.frontendmentor.io/profile/Jacksonishere
-- Live Site URL: https://agitated-shannon-b01fdc.netlify.app/
+- Live Site URL: https://blissful-knuth-7f5533.netlify.app/
 
 ## My process
 
